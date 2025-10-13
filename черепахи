@@ -11,7 +11,7 @@ t.speed(5)
 t.penup()
 t.goto(-380, 200)
 
-# Сітка перегонів
+
 for i in range(15):
     t.write(str(i + 1), align="center", font=("Arial", 14, "normal"))
     t.right(90)
@@ -25,7 +25,6 @@ for i in range(15):
     t.left(90)
     t.forward(60)
 
-# Фінішна лінія
 finish = turtle.Turtle()
 finish.hideturtle()
 finish.speed(0)
@@ -35,7 +34,6 @@ finish.right(90)
 finish.pendown()
 finish.forward(500)
 
-# Гравець 1
 player_1 = turtle.Turtle()
 player_1.shape("turtle")
 player_1.color("red")
@@ -44,7 +42,6 @@ player_1.goto(-380, 120)
 for i in range(10):
     player_1.right(36)
 
-# Гравець 2
 player_2 = turtle.Turtle()
 player_2.shape("turtle")
 player_2.color("blue")
@@ -53,7 +50,7 @@ player_2.goto(-380, 20)
 for i in range(15):
     player_2.right(24)
 
-# Гравець 3
+
 player_3 = turtle.Turtle()
 player_3.shape("turtle")
 player_3.color("green")
@@ -62,7 +59,6 @@ player_3.goto(-380, -80)
 for i in range(20):
     player_3.right(18)
 
-# Гравець 4
 player_4 = turtle.Turtle()
 player_4.shape("turtle")
 player_4.color("orange")
@@ -71,7 +67,6 @@ player_4.goto(-380, -180)
 for i in range(25):
     player_4.right(14)
 
-# Гонка
 x1 = player_1.xcor()
 x2 = player_2.xcor()
 x3 = player_3.xcor()
@@ -87,7 +82,6 @@ while x1 < 340 and x2 < 340 and x3 < 340 and x4 < 340:
     x3 = player_3.xcor()
     x4 = player_4.xcor()
 
-# Повідомлення про переможця
 message = turtle.Turtle()
 message.hideturtle()
 message.penup()
