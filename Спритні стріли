@@ -91,6 +91,7 @@ message.penup()
 message.goto(0, -250)
 message.color("black")
 
+winner = None
 if x1 >= 340:
     message.write("Перемогла ПЕРША стріла!", align="center", font=("Arial", 20, "bold"))
 elif x2 >= 340:
@@ -100,10 +101,17 @@ elif x3 >= 340:
 elif x4 >= 340:
     message.write("Перемогла ЧЕТВЕРТА стріла!", align="center", font=("Arial", 20, "bold"))
 
-time.sleep(2)
+message = turtle.Turtle()
+message.hideturtle()
+message.penup()
+message.goto(0, -290)
+message.color("red")
+
 if bet == winner:
-    window.textinput(" Результат", "Вітаємо! Ви ВИГРАЛИ ставку! Натисни OK щоб завершити.")
+     message.write("Вітаємо! Ви ВИГРАЛИ ставку!", align="center", font=("Arial", 20, "bold"))
 else:
-    window.textinput(" Результат", "На жаль, ви ПРОГРАЛИ ставку. Натисни OK щоб завершити.")
+    message.write("На жаль, ви ПРОГРАЛИ ставку.", align="center", font=("Arial", 20, "bold"))
+
+turtle.done()
 
 turtle.done()
