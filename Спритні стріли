@@ -100,4 +100,10 @@ elif x3 >= 340:
 elif x4 >= 340:
     message.write("Перемогла ЧЕТВЕРТА стріла!", align="center", font=("Arial", 20, "bold"))
 
+time.sleep(2)
+if bet == winner:
+    window.textinput(" Результат", "Вітаємо! Ви ВИГРАЛИ ставку! Натисни OK щоб завершити.")
+else:
+    window.textinput(" Результат", "На жаль, ви ПРОГРАЛИ ставку. Натисни OK щоб завершити.")
+
 turtle.done()
