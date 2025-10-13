@@ -33,6 +33,10 @@ finish.right(90)
 finish.pendown()
 finish.forward(500)
 
+bet = window.textinput("Зроби ставку", "На яку стрілу ти ставиш? (1, 2, 3 або 4):")
+while bet not in ["1", "2", "3", "4"]:
+    bet = window.textinput("Помилка!", "Введи число 1, 2, 3 або 4:")
+
 player_1 = turtle.Turtle()
 player_1.shape("arrow")
 player_1.color("brown")
