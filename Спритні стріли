@@ -76,3 +76,20 @@ while x1 < 340 and x2 < 340 and x3 < 340 and x4 < 340:
     x2 = player_2.xcor()
     x3 = player_3.xcor()
     x4 = player_4.xcor()
+
+message = turtle.Turtle()
+message.hideturtle()
+message.penup()
+message.goto(0, -250)
+message.color("black")
+
+if x1 >= 340:
+    message.write("Перемогла ПЕРША стріла!", align="center", font=("Arial", 20, "bold"))
+elif x2 >= 340:
+    message.write("Перемогла ДРУГА стріла!", align="center", font=("Arial", 20, "bold"))
+elif x3 >= 340:
+    message.write("Перемогла ТРЕТЯ стріла!", align="center", font=("Arial", 20, "bold"))
+elif x4 >= 340:
+    message.write("Перемогла ЧЕТВЕРТА стріла!", align="center", font=("Arial", 20, "bold"))
+
+turtle.done()
