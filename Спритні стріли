@@ -1,5 +1,6 @@
 import turtle
 import random
+import os
 
 window = turtle.Screen()
 window.setup(width=900, height=700)
@@ -112,4 +113,27 @@ if bet == winner:
 else:
     message.write("На жаль, ви ПРОГРАЛИ ставку.", align="center", font=("Arial", 20, "bold"))
 
+message.goto(0, -330)
+message.color("blue")
+message.write(f"Ваші бали: {score}", align="center", font=("Arial", 20, "bold"))
+
+def save_score(score):
+    try:
+        total = int(open("score.txt").read())
+    except:
+        total = 0
+    with open("score.txt", "w") as f:
+        f.write(str(total + score))
+
+def load_score():
+    try:
+        return int(open("score.txt").read())
+    except:
+        return 0
+
+def restart(x, y):
+    turtle.bye()
+    os.system(f'python "{__file__}"')
+
+turtle.onscreenclick(restart)
 turtle.done()
