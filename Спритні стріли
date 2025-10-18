@@ -113,5 +113,3 @@ else:
     message.write("На жаль, ви ПРОГРАЛИ ставку.", align="center", font=("Arial", 20, "bold"))
 
 turtle.done()
-
-turtle.done()
